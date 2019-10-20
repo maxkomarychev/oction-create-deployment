@@ -12,7 +12,7 @@ This action implements `POST` request to `/repos/{owner}/{repo}/deployments`
 # Quick start
 
 ```yaml
-- uses: maxkomarychev/oction-create-deployment@v0.6.0
+- uses: maxkomarychev/oction-create-deployment@v0.6.1
   id: my_step_id
   with:
     token: <token value>
