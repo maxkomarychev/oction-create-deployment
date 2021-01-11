@@ -34,7 +34,7 @@ This action implements `POST` request to `/repos/{owner}/{repo}/deployments`
 |ref|true|The ref to deploy. This can be a branch, tag, or SHA.
 |task|false|Specifies a task to execute (e.g., `deploy` or `deploy:migrations`).
 |auto_merge|false|Attempts to automatically merge the default branch into the requested ref, if it's behind the default branch.
-|required_contexts|false|The [status](https://developer.github.com/v3/repos/statuses/) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.
+|required_contexts|false|The [status](https://developer.github.com/v3/repos/statuses/) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass `<<EMPTY>>`. To provide a list of contexts, use a comma-separated string (eg. `success,pending`). Defaults to all unique contexts.
 |payload|false|JSON payload with extra information about the deployment.
 |environment|false|Name for the target deployment environment (e.g., `production`, `staging`, `qa`).
 |description|false|Short description of the deployment.
